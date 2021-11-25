@@ -3,7 +3,7 @@ $(function () {
     var hour = 0;
     var min_only;
     var timer;
-    var saves=[0,0,0,0,0];//教科数分 要素を並べる
+    var saves=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//教科数分 要素を並べる
     var ls = localStorage;
   
     // 開始
@@ -29,20 +29,59 @@ $(function () {
       var kyoka=$("#subject").val();
       //教科数分ifを追加、教科のところと数字だけ変更
       //加算
-      if (kyoka==="国語"){
+      if (kyoka==="現文"){
           saves.splice(0, 1, saves[0]+min_only+Number($("#shudo").val()));
       };
-      if (kyoka==="数学"){
+      if (kyoka==="古典"){
           saves.splice(1, 1, saves[1]+min_only+Number($("#shudo").val()));
       };
-      if (kyoka==="理科"){
+      if (kyoka==="数I"){
           saves.splice(2, 1, saves[2]+min_only+Number($("#shudo").val()));
       };
-      if (kyoka==="社会"){
+      if (kyoka==="数A"){
           saves.splice(3, 1, saves[3]+min_only+Number($("#shudo").val()));
       };
-      if (kyoka==="英語"){
+      if (kyoka==="物理"){
           saves.splice(4, 1, saves[4]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="化学"){
+          saves.splice(5, 1, saves[5]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="生物"){
+          saves.splice(6, 1, saves[6]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="地学"){
+          saves.splice(7, 1, saves[7]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="世史"){
+          saves.splice(8, 1, saves[8]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="日地"){
+          saves.splice(9, 1, saves[9]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="政経"){
+          saves.splice(10, 1, saves[10]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="現社"){
+          saves.splice(11, 1, saves[11]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="倫理"){
+          saves.splice(12, 1, saves[12]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="コ英"){
+          saves.splice(13, 1, saves[13]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="英表"){
+          saves.splice(14, 1, saves[14]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="情報"){
+          saves.splice(15, 1, saves[15]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="家庭"){
+          saves.splice(16, 1, saves[16]+min_only+Number($("#shudo").val()));
+      };
+      if (kyoka==="保健"){
+          saves.splice(17, 1, saves[17]+min_only+Number($("#shudo").val()));
       };
       //ボタンの有効化・無効化
       $('#stop').prop('disabled', true);
@@ -55,7 +94,7 @@ $(function () {
       if (ls.hasOwnProperty(day)){
             var picked=ls.getItem(day).split(",");
             //要変更
-            var save2=[Number(picked[0])+Number(saves[0]),Number(picked[1])+Number(saves[1]),Number(picked[2])+Number(saves[2]),Number(picked[3])+Number(saves[3]),Number(picked[4])+Number(saves[4])];
+            var save2=[Number(picked[0])+Number(saves[0]),Number(picked[1])+Number(saves[1]),Number(picked[2])+Number(saves[2]),Number(picked[3])+Number(saves[3]),Number(picked[4])+Number(saves[4]),Number(picked[5])+Number(saves[5]),Number(picked[6])+Number(saves[6]),Number(picked[7])+Number(saves[7]),Number(picked[8])+Number(saves[8]),Number(picked[9])+Number(saves[9]),Number(picked[10])+Number(saves[10]),Number(picked[11])+Number(saves[11]),Number(picked[12])+Number(saves[12]),Number(picked[13])+Number(saves[13]),Number(picked[14])+Number(saves[14]),Number(picked[15])+Number(saves[15]),Number(picked[16])+Number(saves[16]),Number(picked[17])+Number(saves[17])];
             ls.removeItem(day);
             ls.setItem(day, save2);
         }
@@ -64,7 +103,7 @@ $(function () {
             ls.setItem(day,saves);
         }
       //要変更
-      saves=[0,0,0,0,0];
+      saves=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
       $("#shudo").val("0");
       $(this).prop("disabled", true);
       $('#list').empty()
@@ -76,20 +115,32 @@ $(function () {
           //教科分追加
           var tr = $('<tr></tr>')
           var tddate = $('<td></td>')
-          var tdjapanese = $('<td></td>')
-          var tdmath = $('<td></td>')
-          var tdscience = $('<td></td>')
-          var tdsocial = $('<td></td>')
-          var tdenglish = $('<td></td>')
+          var td0 = $('<td></td>')
+          var td1 = $('<td></td>')
+          var td2 = $('<td></td>')
+          var td3 = $('<td></td>')
+          var td4 = $('<td></td>')
+          var td5 = $('<td></td>')
+          var td6 = $('<td></td>')
+          var td7 = $('<td></td>')
+          var td8 = $('<td></td>')
+          var td9 = $('<td></td>')
+          var td10 = $('<td></td>')
+          var td11 = $('<td></td>')
+          var td12 = $('<td></td>')
+          var td13 = $('<td></td>')
+          var td14 = $('<td></td>')
+          var td15 = $('<td></td>')
+          var td16 = $('<td></td>')
+          var td17 = $('<td></td>')
           var tdsum=$('<td></td>')
           $('#list').append(tr)
-          tr.append(tddate).append(tdjapanese).append(tdmath).append(tdscience).append(tdsocial).append(tdenglish).append(tdsum)
+          tr.append(tddate).append(td0).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7).append(td8).append(td9).append(td10).append(td11).append(td12).append(td13).append(td14).append(td15).append(td16).append(td17).append(tdsum)
           tddate.html(_key);
-          tdjapanese.html(array[0]);
-          tdmath.html(array[1]);
-          tdscience.html(array[2]);
-          tdsocial.html(array[3]);
-          tdenglish.html(array[4]);
+          for (var arr=0; arr<18; arr++){
+          var tdvar=td+str(arr);
+          tdvar.html(array[arr]);
+          }
           for (var u=0; u<array.length; u++){
               array[u]=parseInt(array[u]);
           }
