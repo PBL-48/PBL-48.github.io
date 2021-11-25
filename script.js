@@ -137,10 +137,24 @@ $(function () {
           $('#list').append(tr);
           tr.append(tddate).append(td0).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7).append(td8).append(td9).append(td10).append(td11).append(td12).append(td13).append(td14).append(td15).append(td16).append(td17).append(tdsum);
           tddate.html(_key);
-          for (var arr=0; arr<18; arr++){
-          var tdvar=td+str(arr);
-          tdvar.html(array[arr]);
-          }
+          td0.html(array[0]);
+          td1.html(array[1]);
+          td2.html(array[2]);
+          td3.html(array[3]);
+          td4.html(array[4]);
+          td5.html(array[5]);
+          td6.html(array[6]);
+          td7.html(array[7]);
+          td8.html(array[8]);
+          td9.html(array[9]);
+          td10.html(array[10]);
+          td11.html(array[11]);
+          td12.html(array[12]);
+          td13.html(array[13]);
+          td14.html(array[14]);
+          td15.html(array[15]);
+          td16.html(array[16]);
+          td17.html(array[17]);
           for (var u=0; u<array.length; u++){
               array[u]=parseInt(array[u]);
           }
