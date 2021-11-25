@@ -134,8 +134,8 @@ $(function () {
           var td16 = $('<td></td>')
           var td17 = $('<td></td>')
           var tdsum=$('<td></td>')
-          $('#list').append(tr)
-          tr.append(tddate).append(td0).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7).append(td8).append(td9).append(td10).append(td11).append(td12).append(td13).append(td14).append(td15).append(td16).append(td17).append(tdsum)
+          $('#list').append(tr);
+          tr.append(tddate).append(td0).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7).append(td8).append(td9).append(td10).append(td11).append(td12).append(td13).append(td14).append(td15).append(td16).append(td17).append(tdsum);
           tddate.html(_key);
           for (var arr=0; arr<18; arr++){
           var tdvar=td+str(arr);
