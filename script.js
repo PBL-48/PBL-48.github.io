@@ -83,6 +83,7 @@ $(function () {
       if (kyoka==="保健"){
           saves.splice(17, 1, saves[17]+min_only+Number($("#shudo").val()));
       };
+      console.log("saves="+String(saves));
       //ボタンの有効化・無効化
       $('#stop').prop('disabled', true);
       $('#start').prop('disabled', false);
@@ -103,6 +104,7 @@ $(function () {
             ls.setItem(day,saves);
         }
       //要変更
+      console.log("save2="+String(save2));
       saves=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
       $("#shudo").val("0");
       $(this).prop("disabled", true);
@@ -111,7 +113,7 @@ $(function () {
           for (var i = 0; i < ls.length; i++) {
           var _key = ls.key(i)
           var array=ls.getItem(_key).split(",");
-          }
+          
           // 登録されているkey, valueを順に取得して表示
           //教科分追加
           var tr = $('<tr></tr>')
@@ -161,8 +163,9 @@ $(function () {
           }
           tdsum.html(array.reduce(function(sum, element){
               return sum+element;
-          }))
-      
+          }));
+      console.log("array="+String(array));
+        }
       //表からデータ取得
       var table=$('table#csv-table tr').map(function(i) {
         return $(this).find('td,th').map(function() {
