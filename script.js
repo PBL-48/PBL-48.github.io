@@ -162,7 +162,6 @@ $(function () {
           tdsum.html(array.reduce(function(sum, element){
               return sum+element;
           }))
-      }
       
       //表からデータ取得
       var table=$('table#csv-table tr').map(function(i) {
