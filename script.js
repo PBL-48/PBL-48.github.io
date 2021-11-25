@@ -111,6 +111,7 @@ $(function () {
           for (var i = 0; i < ls.length; i++) {
           var _key = ls.key(i)
           var array=ls.getItem(_key).split(",");
+          }
           // 登録されているkey, valueを順に取得して表示
           //教科分追加
           var tr = $('<tr></tr>')
