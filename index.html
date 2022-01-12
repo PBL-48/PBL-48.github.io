@@ -13,7 +13,7 @@
 </head>
 <body>
   <div id="clock">
-    00:00
+    00:00'00
     </div>
   <div id="main">
     <select id="subject" name="subject"><!--要変更-->
@@ -42,19 +42,19 @@
     <input type="button" id="stop" value="停止" disabled>
   </div>
   <div id="manual">
-      <p>手動で時間を追加・巻き戻し(負)したい場合は下に入力↓&開始+停止</p>
-      <input type="number" id="shudo" value="0">
+      <p>手動で時間を追加<input type="number" id="shudo" value="0"><input type="button" id="add" value="決定"></p>
+      
   </div>
   <div id="download">
     <a id="download_button">下記の表のダウンロード</a>
   </div>
   <div id="csv">
-      <table border="1" id="csv-table">
+      <table border="1" id="csv-table" >
           <tr>
-              <th>日</th>
+              <th>日付</th>
               <th>現文</th>
               <th>古典</th>
-              <th>数ＩⅡⅢ</th>
+              <th>数ⅠⅡⅢ</th>
               <th>数ＡＢ探</th>
               <th>物理</th>
               <th>化学</th>

@@ -1,17 +1,38 @@
-#subject{
-    font-size: 50px;
+
+select{
+	font-size: 40px;
+	line-height: 1.1em;
+	border-radius: 5px;
+	border: none;
+	background-repeat: no-repeat;
+	background-size: 12px 10px;
+	background-position: right 10px center;
+	background-color: #bddfff;
 }
-#main{
-    margin-left: auto;
-    margin-right: auto;
-}
-#start{
+#start, #stop{
     font-size: 40px;
-}
-#stop{
-    font-size: 40px;
+    font-family: 'Franklin Gothic';
+    color: #fff;
+    background-color: #eb6200;
+    
 }
 #clock{
    font-size: 80px;
    text-align: center;
+   font-family: fantasy;
+}
+#csv-table{
+    width:100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#csv-table th{
+    background: #ffc7af;
+    border:solid 1px #778ca3;
+    text-align: center;
+}
+#csv-table td{
+    background: #ffdbc9;
+    border:solid 1px #778ca3;
+    text-align: end;
 }
