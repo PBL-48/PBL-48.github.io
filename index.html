@@ -19,8 +19,8 @@
     <select id="subject" name="subject"><!--要変更-->
       <option value="現文">現代文</option>
       <option value="古典">古典</option>
-      <option value="数I">数ⅠⅡⅢ</option>
-      <option value="数A">数ＡＢ探究</option>
+      <option value="数I">数①(Ⅰ,Ⅱ,Ⅲ)</option>
+      <option value="数A">数②(Ａ,Ｂ,探究)</option>
       <option value="物理">物理</option>
       <option value="化学">化学</option>
       <option value="生物">生物</option>
@@ -42,20 +42,20 @@
     <input type="button" id="stop" value="停止" disabled>
   </div>
   <div id="manual">
-      <p>手動で時間を追加<input type="number" id="shudo" value="0"><input type="button" id="add" value="決定"></p>
+      <p>手動で時間を追加（負で減少）</p>
+      <input type="number" id="shudo" value="0">
+      <input type="button" id="add" value="決定">
       
   </div>
-  <div id="download">
-    <a id="download_button">下記の表のダウンロード</a>
-  </div>
+
   <div id="csv">
       <table border="1" id="csv-table" >
           <tr>
               <th>日付</th>
               <th>現文</th>
               <th>古典</th>
-              <th>数ⅠⅡⅢ</th>
-              <th>数ＡＢ探</th>
+              <th>数①</th>
+              <th>数②</th>
               <th>物理</th>
               <th>化学</th>
               <th>生物</th>
@@ -74,8 +74,8 @@
           </tr>
           <tbody id="list"></tbody>
       </table>
-  <div id="note">
-    ※表として保存したい内容が表に表示されていない場合は開始→停止をクリックしてください
+  <div id="buttons">
+    <input type="button" id="reload" value="表を再読込">    <a id="download_button">表をダウンロード</a>
   </div>
 </body>
 </html>

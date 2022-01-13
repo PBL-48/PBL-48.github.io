@@ -190,8 +190,8 @@ $(function () {
         a.href= url;
     })
     
-    //手動追加
-    $('#add').click(function(){
+    //手動追加・表の再読込
+    $('#add,#reload').click(function(){
         //内部計算用変数をリセット
         sec=0;
         min = 0;
