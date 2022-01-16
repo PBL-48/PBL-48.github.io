@@ -74,3 +74,9 @@ select{
     box-shadow    : none;        /* カーソル時の影消去 */
     opacity       : 0.8;         /* カーソル時透明度 */
 }
+footer{
+    width:100%;
+    text-align: right;
+    padding: 30px 0;
+    bottom:0;
+}
