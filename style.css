@@ -1,65 +1,65 @@
 
-select{
-	font-size: 40px;
-	line-height: 1.1em;
-	border-radius: 5px;
-	border: none;
-	background-repeat: no-repeat;
-	background-size: 12px 10px;
-	background-position: right 10px center;
-	background-color: #bddfff;
-    box-shadow    : 3px 3px 2px #666666;
+select{/*教科選択*/
+	font-size: 40px;/*文字の大きさ*/
+	line-height: 1.1em;/*一行の高さ*/
+	border-radius: 5px;/*外枠の角の丸みの半径*/
+	border: none;/*枠線*/
+	background-repeat: no-repeat;/*背景の繰り返し*/
+	background-size: 12px 10px;/*背景の大きさ*/
+	background-position: right 10px center;/*背景位置*/
+	background-color: #bddfff;/*背景色*/
+        box-shadow: 3px 3px 2px #666666;/*影*/
 }
-#start, #stop{
-    margin-top: 5px;
+#start, #stop{/*開始・停止ボタン*/
+    margin-top: 5px;/*上空ける*/
      
-    color:white;
-    background-color: #eb6100; 
+    color:white;/*文字色白*/
+    background-color: #eb6100;/*背景色*/ 
 }
-#start:hover, #stop:hover{
-    color:white;
-    background-color: #eb6a00;
+#start:hover, #stop:hover{/*開始・停止ボタン（カーソルを合わせた時）*/
+    color:white;/*文字色白*/
+    background-color: #eb6a00;/*背景色*/
 }
-#add, #reload, #download_button{
-    color:black;
-    background-color: #bddfff;
+#add, #reload, #download_button{/*決定ボタン、再読込ボタン、ダウンロードボタン*/
+    color:black;/*文字色黒*/
+    background-color: #bddfff;/*背景色*/
 }
-#reload, #download_button{
-    margin-top: 5px;
+#reload, #download_button{/*再読込ボタン、ダウンロードボタン*/
+    margin-top: 5px;/*上空ける*/
 }
-#clock{
-   font-size: 80px;
-   font-family: 'impact', fantasy;
+#clock{/*時計表示*/
+   font-size: 80px;/*文字の大きさ*/
+   font-family: 'impact', fantasy;/*フォント*/
 }
-#shudo{
-    font-family: 'impact', fantasy;
-    padding: 12px 12px;
-    font-size: 18pt;
-    border: 2px solid #666666;
-    box-shadow: 3px 3px 2px #666666;
-    line-height: 0em;
-    background-color: #bddfff;
+#shudo{/*手動入力欄*/
+    font-family: 'impact', fantasy;/*フォント*/
+    padding: 12px 12px;/*余白*/
+    font-size: 18pt;/*フォントの大きさ*/
+    border: 2px solid #666666;/*枠*/
+    box-shadow: 3px 3px 2px #666666;/*影*/
+    line-height: 0em;/*一行の高さ*/
+    background-color: #bddfff;/*背景色*/
 }
-#csv-table{
-    margin-top: 5px;
-    width:100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+#csv-table{/*表*/
+    margin-top: 5px;/*上空ける*/
+    width:100%;/*幅*/
+    border-collapse: collapse;/*枠の重複*/
+    border-spacing: 0;/*枠の間隔*/
 }
-#csv-table th{
-    background: #ffc7af;
-    border:solid 1px #778ca3;
-    text-align: center;
+#csv-table th{/*表の教科欄*/
+    background: #ffc7af;/*背景色*/
+    border:solid 1px #778ca3;/*枠*/
+    text-align: center;/*中央ぞろえ*/
 }
-#csv-table td{
-    background: #ffdbc9;
-    border:solid 1px #778ca3;
-    text-align: end;
+#csv-table td{/*表のメイン欄*/
+    background: #ffdbc9;/*背景色*/
+    border:solid 1px #778ca3;/*枠*/
+    text-align: end;/*右揃え*/
 }
-#start, #stop, #reload, #add, #download_button{
-    font-family: monospace;
-    display       : inline-block;
-    border-radius : 10%;          /* 角丸       */
+#start, #stop, #reload, #add, #download_button{/*ボタン各種*/
+    font-family: monospace;/*フォント*/
+    display       : inline-block;/*表示形式*/
+    border-radius : 10%;          /* 枠の角の丸みの半径     */
     font-size     : 18pt;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
@@ -70,13 +70,13 @@ select{
     box-shadow    : 3px 3px 2px #666666;  /* 影の設定 */
     border        : 2px solid #666666;    /* 枠の指定 */
 }
-#start:hover, #stop:hover, #reload:hover, #add:hover, #download_button:hover{
+#start:hover, #stop:hover, #reload:hover, #add:hover, #download_button:hover{/*ボタン各種にカーソルを合わせた時*/
     box-shadow    : none;        /* カーソル時の影消去 */
     opacity       : 0.8;         /* カーソル時透明度 */
 }
-footer{
-    width:100%;
-    text-align: right;
-    padding: 30px 0;
-    bottom:0;
+footer{/*フッター*/
+    width:100%;/*幅*/
+    text-align: right;/*右揃え*/
+    padding: 30px 0;/*余白*/
+    bottom:0;/*下ぞろえ*/
 }
