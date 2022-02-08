@@ -94,26 +94,21 @@ $(function () {
     //localstorageに保存
         let date=new Date();
         let day=date.getDate();
-        //すでにその日付があれば
+        //すでにその日付があれば配列同士を足す
         if (ls.hasOwnProperty(day)){
-            //ローカルストレージからその日付をとってきて配列化する
             var picked=ls.getItem(day).split(",");
-            //とってきた配列と今測った時間を足して新しく配列にしておく
             var save2=[Number(picked[0])+Number(saves[0]),Number(picked[1])+Number(saves[1]),Number(picked[2])+Number(saves[2]),Number(picked[3])+Number(saves[3]),Number(picked[4])+Number(saves[4]),Number(picked[5])+Number(saves[5]),Number(picked[6])+Number(saves[6]),Number(picked[7])+Number(saves[7]),Number(picked[8])+Number(saves[8]),Number(picked[9])+Number(saves[9]),Number(picked[10])+Number(saves[10]),Number(picked[11])+Number(saves[11]),Number(picked[12])+Number(saves[12]),Number(picked[13])+Number(saves[13]),Number(picked[14])+Number(saves[14]),Number(picked[15])+Number(saves[15]),Number(picked[16])+Number(saves[16]),Number(picked[17])+Number(saves[17])];
-            //元のやつを消す
             ls.removeItem(day);
-            //新しく配列にしておいたやつを現在日付で保存
             ls.setItem(day, save2);
         }
         //なければそのまま追加
         else {
             ls.setItem(day,saves);
         }
-        //保存できたので配列はリセット
+
+        console.log("save2="+String(save2));
         saves=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-        //手動入力欄を0にする
         $("#shudo").val("0");
-        //一回表を全消しする
         $('#list').empty()
             // localStorageすべての情報の取得
             for (var i = 0; i < ls.length; i++) {
@@ -141,7 +136,7 @@ $(function () {
             var td16 = $('<td></td>')
             var td17 = $('<td></td>')
             var tdsum=$('<td></td>')
-            $('#list').append(tr);//ここら辺は何となくはわかるけど詳しくはわからん
+            $('#list').append(tr);
             tr.append(tddate).append(td0).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7).append(td8).append(td9).append(td10).append(td11).append(td12).append(td13).append(td14).append(td15).append(td16).append(td17).append(tdsum);
             tddate.html(_key);
             td0.html(array[0]);
@@ -162,14 +157,13 @@ $(function () {
             td15.html(array[15]);
             td16.html(array[16]);
             td17.html(array[17]);
-            //ここは多分数字として足せるように文字列を整数に変換
             for (var u=0; u<array.length; u++){
                 array[u]=parseInt(array[u]);
             }
-            //最後の行に合計を追加
             tdsum.html(array.reduce(function(sum, element){
                 return sum+element;
             }));
+        console.log("array="+String(array));
         }
         //表からデータ取得
         var table=$('table#csv-table tr').map(function(i) {
@@ -196,7 +190,6 @@ $(function () {
     
     //手動追加・表の再読込
     $('#add,#reload').click(function(){
-        //<基本的に開始・停止をそのままコピペ>
         //内部計算用変数をリセット
         sec=0;
         min = 0;
@@ -279,7 +272,7 @@ $(function () {
         else {
             ls.setItem(day,saves);
         }
-       
+        //要変更
         console.log("save2="+String(save2));
         saves=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         $("#shudo").val("0");
@@ -362,11 +355,14 @@ $(function () {
         a.download_button="table.csv";
         a.href= url;
     });
+    $("#clear").click(function(){
+        localStorage.clear();
+    });
     //カウントアップ
     function countup()
     {
       sec += 1;
-      //ifは繰り上がり
+
       if (sec>59){
           sec=0;
           min+=1;
