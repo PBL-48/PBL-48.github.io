@@ -12,12 +12,12 @@
   </script>
 </head>
 <body>
-  <div id="clock"><!--時間表示-->
+  <div id="clock">
     00:00'00
     </div>
   <div id="main">
-    <select id="subject" name="subject"><!--教科選択-->
-      <option value="現文">現代文</option><!--valueはプログラム内での認識名-->
+    <select id="subject" name="subject"><!--要変更-->
+      <option value="現文">現代文</option>
       <option value="古典">古典</option>
       <option value="数I">数①(Ⅰ,Ⅱ,Ⅲ)</option>
       <option value="数A">数②(Ａ,Ｂ,探究)</option>
@@ -38,19 +38,19 @@
     </select>
 
     <br>
-    <input type="button" id="start" value="開始"><!--開始・停止ボタン-->
+    <input type="button" id="start" value="開始">
     <input type="button" id="stop" value="停止" disabled>
   </div>
   <div id="manual">
       <p>▼手動入力</p>
-      <input type="number" id="shudo" value="0"><!--数字のみ可能-->
-      <input type="button" id="add" value="決定"><!--決定ボタン-->
+      <input type="number" id="shudo" value="0">
+      <input type="button" id="add" value="決定">
       
   </div>
 
   <div id="csv">
-      <table border="1" id="csv-table" ><!--表-->
-          <tr><!--教科だけ-->
+      <table border="1" id="csv-table" >
+          <tr>
               <th>日付</th>
               <th>現文</th>
               <th>古典</th>
@@ -72,16 +72,15 @@
               <th>保健</th>
               <th>合計</th>
           </tr>
-          <tbody id="list"></tbody><!--この中に追加していく-->
+          <tbody id="list"></tbody>
       </table>
   <div id="buttons">
-    <input type="button" id="reload" value="表を再読込">    <a id="download_button">表をダウンロード</a>
+    <input type="button" id="reload" value="表を再読込">    <a id="download_button">表をダウンロード</a> <input type="button" id="clear" value="全内容をクリア">
   </div>
-
 </body>
 <footer>
-  <div><!--ヘルプボタン-->
-    <a href="https://drive.google.com/file/d/1-a7z3X-6UPIBWbQnEWQ7VXfoWQm6lakA/view?usp=sharing">ヘルプ</a>
+  <div>
+    <a href="help.pdf">ヘルプ</a>
   </div>
 </footer>
 </html>
