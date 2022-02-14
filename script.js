@@ -196,9 +196,6 @@ $(function () {
         hour = 0;
         min_only=0;
         $('#clock').html("00:00'00");//表示をリセット
-        timer = setInterval(countup, 1000);//countup関数を60秒間隔＝timerとする
-        // 一時停止
-        clearInterval(timer);//timerを止める
         //現在の選択要素を変数に
         var kyoka=$("#subject").val()
         //配列内の対応番目に分を加算
